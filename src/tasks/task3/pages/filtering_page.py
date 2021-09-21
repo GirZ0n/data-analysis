@@ -20,6 +20,7 @@ def show_filter_page():
     st.header(f'Surrounding area')
 
     left_column, right_column = st.columns(2)
+
     with left_column:
         stop_id = int(
             st.number_input(
