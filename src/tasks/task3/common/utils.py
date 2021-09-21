@@ -75,8 +75,10 @@ def show_plots(
     reverse_distance = link[:, 2][::-1]
 
     scree_plot = px.line(x=range(1, len(reverse_distance) + 1), y=reverse_distance, markers=True)
+
     if threshold is not None:
         scree_plot.add_hline(y=threshold, opacity=0.5)
+
     scree_plot.update_layout(xaxis_title='Step', yaxis_title='Distance')
     st.plotly_chart(scree_plot, use_container_width=True)
 
