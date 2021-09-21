@@ -68,7 +68,6 @@ def show_plots(
         dendrogram.add_hline(y=threshold, opacity=0.5)
 
     dendrogram.update_layout(xaxis_title='Object number', yaxis_title='Distance')
-
     st.plotly_chart(dendrogram, use_container_width=True)
 
     link = linkage(df[['lat', 'lon']], method=method, metric=metric)
