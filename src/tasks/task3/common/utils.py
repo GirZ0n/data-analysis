@@ -26,12 +26,12 @@ def filter_df_by_radius(df: pd.DataFrame, stop_id: int, radius: int = 1000) -> p
     init_lat = df[df['stop_id'] == stop_id]['lat'].values[0]
     init_lon = df[df['stop_id'] == stop_id]['lon'].values[0]
 
-    def filter_row_function(row) -> bool:
+    def filter_row(row) -> bool:
         if great_circle((init_lat, init_lon), (row['lat'], row['lon'])).m <= radius:
             return True
         return False
 
-    mask = df.apply(filter_row_function, axis=1)
+    mask = df.apply(filter_row, axis=1)
     return df[mask]
 
 
