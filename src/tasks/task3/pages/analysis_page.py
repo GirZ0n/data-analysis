@@ -42,12 +42,12 @@ def show_analysis_page():
             threshold = st.number_input(
                 'Threshold:',
                 key=f'{method}_{metric}_threshold',
-                value=0.0,
+                value=float(0),
                 format='%f',
-                min_value=0.0,
+                min_value=float(0),
             )
 
-            if threshold == 0.0:
+            if threshold == float(0):
                 threshold = None
 
             show_plots(filtered_stops, method=method, metric=metric, threshold=threshold)

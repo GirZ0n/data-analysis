@@ -1,7 +1,7 @@
-import src.tasks.task3.pages.filtering_page
-from src.tasks.task3.pages import analysis_page
+from src.tasks.task3.pages.filtering_page import show_filter_page
+from src.tasks.task3.pages.analysis_page import show_analysis_page
 
 PAGE_MAP = {
-    'Filtering': filtering_page.show_filter_page,
-    'Analysis': analysis_page.show_analysis_page,
+    'Filtering': show_filter_page,
+    'Analysis': show_analysis_page,
 }
