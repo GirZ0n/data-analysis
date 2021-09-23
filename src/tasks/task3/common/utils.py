@@ -4,12 +4,26 @@ import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
 import streamlit as st
-from _plotly_utils.colors.carto import Prism
 from geopy.distance import great_circle
 from scipy.cluster.hierarchy import fcluster, linkage
 from scipy.spatial.distance import pdist
 
 from src.tasks.task3 import DATA_FOLDER
+
+
+_Prism = [
+    "rgb(95, 70, 144)",
+    "rgb(29, 105, 150)",
+    "rgb(56, 166, 165)",
+    "rgb(15, 133, 84)",
+    "rgb(115, 175, 72)",
+    "rgb(237, 173, 8)",
+    "rgb(225, 124, 5)",
+    "rgb(204, 80, 62)",
+    "rgb(148, 52, 110)",
+    "rgb(111, 64, 112)",
+    "rgb(102, 102, 102)",
+]
 
 
 @st.cache
@@ -40,7 +54,7 @@ def show_map(df, color: str = None, zoom: int = 12):
         hover_data=['stop_id'],
         color=color,
         zoom=zoom,
-        color_continuous_scale=Prism,
+        color_continuous_scale=_Prism,
     )
     fig.update_layout(showlegend=False, coloraxis_showscale=False)
     st.plotly_chart(fig, use_container_width=True)
