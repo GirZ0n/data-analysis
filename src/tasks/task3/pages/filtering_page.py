@@ -25,7 +25,7 @@ def show_filter_page():
         stop_id = int(
             st.number_input(
                 'Enter a stop id:',
-                value=st.session_state.setdefault('stop_id', 100209),
+                value=st.session_state.setdefault('stop_id', 100103),
                 on_change=stop_id_callback,
                 key='stop_id_input',
             ),
