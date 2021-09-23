@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
 import streamlit as st
+from _plotly_utils.colors.carto import Prism
 from geopy.distance import great_circle
 from scipy.cluster.hierarchy import fcluster, linkage
 from scipy.spatial.distance import pdist
@@ -39,7 +40,7 @@ def show_map(df, color: str = None, zoom: int = 12):
         hover_data=['stop_id'],
         color=color,
         zoom=zoom,
-        mapbox_style='carto-positron',
+        color_continuous_scale=Prism,
     )
     fig.update_layout(showlegend=False, coloraxis_showscale=False)
     st.plotly_chart(fig, use_container_width=True)
