@@ -1,5 +1,6 @@
 import sys
 
+from plotly.express import set_mapbox_access_token
 import streamlit as st
 
 sys.path.append('')
@@ -9,6 +10,8 @@ from src.tasks.task3.pages import PAGE_MAP
 
 
 def main():
+    set_mapbox_access_token(sys.argv[1])
+
     st.set_page_config(layout='wide')
 
     with st.sidebar:
