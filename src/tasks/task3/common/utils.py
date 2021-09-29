@@ -10,7 +10,6 @@ from scipy.spatial.distance import pdist
 
 from src.tasks.task3 import DATA_FOLDER
 
-
 _Prism = [
     'rgb(95, 70, 144)',
     'rgb(29, 105, 150)',
