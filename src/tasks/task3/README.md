@@ -1,4 +1,4 @@
-# Cluster analysis
+# Cluster analysis and K-means clustering
 
 ## How to run
 ```bash
