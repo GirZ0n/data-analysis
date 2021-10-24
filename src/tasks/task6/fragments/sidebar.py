@@ -26,7 +26,7 @@ def show_sidebar(stats: pd.DataFrame) -> None:
         StateVar.REGION_B.set(region_b)
 
         significance_level = st.number_input(
-            r'Уровень значимости:',
+            'Уровень значимости:',
             min_value=float(0),
             max_value=float(1),
             value=0.01,

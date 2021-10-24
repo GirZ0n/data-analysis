@@ -13,7 +13,7 @@ def _show_data_from_region(stats: pd.DataFrame, region: str, success_column_name
     n = stats.loc[region].sum()
 
     st.markdown(
-        rf"""
+        f"""
           $$d_A = {d}$$ — смертей </br>
           $$n_A = {n}$$ — подтверждённых диагнозов
           """,

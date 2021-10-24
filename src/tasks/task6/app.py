@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 from src.tasks.task6 import DATA_FOLDER
-from src.tasks.task6.common import Column, PERIOD_MAP, Period, StateVar
+from src.tasks.task6.common import Column, Period, StateVar
 from src.tasks.task6.fragments.data import show_data
 from src.tasks.task6.fragments.results import show_results
 from src.tasks.task6.fragments.sidebar import show_sidebar
@@ -29,7 +29,7 @@ def _get_stats_by_date(stats: pd.DataFrame, date: datetime.date, *, per_day: boo
     columns = _get_columns(per_day)
 
     return stats[
-        (stats[Column.DATE.value] == date)
+        (stats[Column.DATE.value] == date)  # noqa: WPS465
         & (stats[Column.REGION.value].isin([StateVar.REGION_A.get(), StateVar.REGION_B.get()]))
     ][
         [
@@ -37,7 +37,7 @@ def _get_stats_by_date(stats: pd.DataFrame, date: datetime.date, *, per_day: boo
             *columns,
         ]
     ].set_index(
-        Column.REGION.value
+        Column.REGION.value,
     )
 
 
@@ -51,10 +51,9 @@ def _get_filtered_stats(stats: pd.DataFrame) -> pd.DataFrame:
             curr_stats = _get_stats_by_date(stats, curr_date, per_day=False)
             prev_stats = _get_stats_by_date(stats, prev_date, per_day=False)
             return curr_stats - prev_stats
-        else:
-            return _get_stats_by_date(stats, curr_date, per_day=False)
-    else:
-        return _get_stats_by_date(stats, StateVar.DATE.get(), per_day=False)
+        return _get_stats_by_date(stats, curr_date, per_day=False)
+
+    return _get_stats_by_date(stats, StateVar.DATE.get(), per_day=False)
 
 
 def _get_success_column() -> str:
