@@ -20,13 +20,6 @@ class StateVar(Enum):
 
 
 @unique
-class Period(Enum):
-    PER_DAY = 'per_day'
-    PER_MONTH = 'per_month'
-    ALL = 'all'
-
-
-@unique
 class Column(Enum):
     DATE = 'Дата'
     REGION = 'Регион'
@@ -36,6 +29,13 @@ class Column(Enum):
     RECOVERED = 'Выздоровлений'
     INFECTIONS = 'Заражений'
     DEATHS = 'Смертей'
+
+
+@unique
+class Period(Enum):
+    PER_DAY = 'per_day'
+    PER_MONTH = 'per_month'
+    ALL = 'all'
 
 
 PERIOD_MAP = {

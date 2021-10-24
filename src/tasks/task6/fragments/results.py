@@ -26,5 +26,5 @@ def show_results(d: List[int], n: List[int]):
         unsafe_allow_html=True,
     )
 
-    st.header('Вывод')
+    st.subheader('Вывод')
     _check_p_value(p_value, StateVar.SIGNIFICANCE_LEVEL.get())

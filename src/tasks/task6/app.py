@@ -50,8 +50,7 @@ def _get_filtered_stats(stats: pd.DataFrame) -> pd.DataFrame:
         if prev_date in stats[Column.DATE.value].unique():
             curr_stats = _get_stats_by_date(stats, curr_date, per_day=False)
             prev_stats = _get_stats_by_date(stats, prev_date, per_day=False)
-            result = curr_stats - prev_stats
-            return result
+            return curr_stats - prev_stats
         else:
             return _get_stats_by_date(stats, curr_date, per_day=False)
     else:
