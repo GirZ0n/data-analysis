@@ -1,8 +1,12 @@
 import datetime
+import sys
 from typing import List
 
 import pandas as pd
 import streamlit as st
+
+sys.path.append('')
+sys.path.append('../../..')
 
 from src.tasks.task6 import DATA_FOLDER
 from src.tasks.task6.common import Column, Period, StateVar
