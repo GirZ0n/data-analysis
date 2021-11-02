@@ -4,8 +4,11 @@ max-line-length=120
 ignore=D10, # Missing docstrings
        I00, # flake8-isort
        E402, # Module level import not at top of file.
+       W503, # Line break occurred before a binary operator.
        WPS100, # Forbid blacklisted module names.
+       WPS110, # Forbid blacklisted variable names.
        WPS111, # Forbid short variable or module names.
+       WPS115, # Require snake_case for naming class attributes.
        WPS210, # Forbid too many local variables in the unit of code.
        WPS211, # Forbid too many arguments for a function or method.
        WPS221, # Forbid complex lines.
