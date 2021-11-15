@@ -8,6 +8,6 @@ Repository with data analysis homework.
 4. [K-means clustering](./src/tasks/task3).
 5. [Testing of statistical hypotheses](./src/tasks/task5).
 6. [A/B testing](./src/tasks/task6).
-7. ---
-8. ---
+7. &#8209;&#8209;&#8209;
+8. &#8209;&#8209;&#8209;
 9. [Time series forecasting](./src/tasks/task9).
