@@ -11,5 +11,5 @@ Repository with data analysis homework.
 7. &#8209;&#8209;&#8209;&#8209;&#8209;
 8. [Forecasting using linear regression](./src/tasks/task8).
 9. [Time series forecasting](./src/tasks/task9).
-10. [Determining the type of ceramics using a decision tree](./src/tasks/task10).
+10. [Prediction of ceramics using a decision tree](./src/tasks/task10).
 11. [Wine quality assessment using a random forest](./src/tasks/task11).
